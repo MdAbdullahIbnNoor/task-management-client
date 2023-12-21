@@ -6,13 +6,11 @@ import { useForm } from "react-hook-form"
 import { BsPersonVideo2 } from "react-icons/bs";
 import { MdAddPhotoAlternate } from "react-icons/md";
 import Swal from 'sweetalert2'
-import useAxios from '../../hooks/useAxios';
 import useAuth from '../../hooks/useAuth';
 
 
 
 const SignUp = () => {
-    const axios = useAxios();
     const { createUser, googleSignIn, updateUserProfile } = useAuth();
     const {
         register,
