@@ -51,10 +51,9 @@ const router = createBrowserRouter([
         element: <TaskList />,
       },
       {
-        path: 'profile',
+        path: 'userProfile',
         element: <UserProfile />,
       },
-      // Add more user routes as needed
     ]
   }
 ]);

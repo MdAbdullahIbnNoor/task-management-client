@@ -6,28 +6,28 @@ import { FaAd, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaUsers
 
 const Dashboard = () => {
     return (
-        <div className='flex py-8 '>
-            <div className="w-72 min-h-[950px] bg-amber-500">
+        <div className='flex'>
+            <div className="w-56 min-h-[770px] bg-amber-500">
                 {/* side bar */}
                 <ul className='menu '>
 
                     <>
-                        <li className='px-3 py-2 text-lg font-medium'>
-                            <NavLink to='/dashboard/userHome'><FaHome /> User Home</NavLink>
+                        <li className='px-1 py-2 text-base font-medium flex gap-2 items-center'>
+                            <NavLink to='/dashboard/userProfile'><FaHome />UserHome</NavLink>
                         </li>
-                        <li className='px-3 py-2 text-lg font-medium'>
-                            <NavLink to='/dashboard/taskList'><FaCalendar />Task List</NavLink>
+                        <li className='px-1 py-2 text-base font-medium flex gap-2 items-center'>
+                        <NavLink to='/dashboard/taskList'><FaCalendar />Task List</NavLink>
                         </li>
-                        <li className='px-3 py-2 text-lg font-medium'>
-                            <NavLink to='/dashboard/addTask'><FaAd /> Add a Task</NavLink>
+                        <li className='px-1 py-2 text-base font-medium flex gap-2 items-center'>
+                        <NavLink to='/dashboard/createTask'><FaAd /> Add a Task</NavLink>
                         </li>
                     </>
 
                     {/* Shered links */}
                     <div className='divider px-4'></div>
 
-                    <li className='px-3 py-2 text-lg font-medium'>
-                        <NavLink to='/'><FaHome />Home</NavLink>
+                    <li className='px-1 py-2 text-base font-medium flex gap-2 items-center'>
+                    <NavLink to='/'><FaHome />Home</NavLink>
                     </li>
                 </ul>
             </div>

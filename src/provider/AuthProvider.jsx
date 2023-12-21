@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, signInWithPopup, GoogleAuthProvider, updateProfile } from "firebase/auth";
 import { app } from '../firebase/firebase.config';
-import useAxiosPublic from '../hooks/useAxios';
+import useAxiosPublic from '../hooks/useAxiosPublic';
 
 export const AuthContext = createContext(null);
 const provider = new GoogleAuthProvider();
@@ -44,13 +44,14 @@ const AuthProvider = ({ children }) => {
             if(currentUser){
                 // get token and store client
                 const userInfo = {email: currentUser.email};
-                axiosPublic.post('/jwt', userInfo)
-                .then(res => {
-                    if(res.data.token){
-                        localStorage.setItem('access-token', res.data.token);
-                        setLoading(false);
-                    }
-                })
+                setLoading(false);
+                // axiosPublic.post('/jwt', userInfo)
+                // .then(res => {
+                //     if(res.data.token){
+                //         localStorage.setItem('access-token', res.data.token);
+                //         
+                //     }
+                // })
             }
             else{
                 // TODO: remove token (if token stored in the client side: Local storage , caching, in memory)

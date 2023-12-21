@@ -4,7 +4,7 @@ import bgfrom from '../../assets/others/authentication.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAuth from '../../hooks/useAuth';
-import useAxios from '../../hooks/useAxios';
+import useAxios from '../../hooks/useAxiosPublic';
 
 const Login = () => {
     const [disabled, setDisabled] = useState(true)
