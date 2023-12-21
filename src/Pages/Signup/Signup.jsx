@@ -1,6 +1,6 @@
 import React from 'react'
 import loginIMG from '../../assets/signup.png';
-import bgForm from '../../assets/bg.jpg';
+import bgForm from '../../assets/bg.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form"
 import { BsPersonVideo2 } from "react-icons/bs";

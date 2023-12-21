@@ -51,20 +51,10 @@ const Login = () => {
             })
     }
 
-    const handleValidateCaptcha = (e) => {
-        const user_captcha_value = e.target.value;
-
-        if (validateCaptcha(user_captcha_value) == true) {
-            setDisabled(false)
-        }
-    }
 
 
     return (
         <div>
-            <Helmet>
-                <title>Bistro Boss || SignUp</title>
-            </Helmet>
             <div className="hero min-h-[800px] bg-base-200 my-24 object-cover" style={{ backgroundImage: `url(${bgfrom})` }}>
                 <div className="bg-opacity-0"></div>
                 <div className="hero-content flex-col lg:flex-row lg:gap-24 justify-around border-2 lg:h-[650px] w-[1400px] px-16 shadow-2xl">
@@ -97,17 +87,9 @@ const Login = () => {
                                 <input type="password" name='password' className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Password" required />
                             </div>
 
-                            {/* Captcha */}
-                            <div className="flex flex-col items-start my-4 space-y-3">
-                                <span className="">
-                                    <LoadCanvasTemplate />
-                                </span>
-
-                                <input type="text" onBlur={handleValidateCaptcha} name='captcha' className="static block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Type Captcha Here" />
-                            </div>
 
                             <div className="mt-6">
-                                <button disabled={disabled} type="submit" className={disabled ? "w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-500 rounded-lg hover:bg-gray-600 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50" : "w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-amber-500 rounded-lg hover:bg-amber-600 focus:outline-none focus:ring focus:ring-amber-300 focus:ring-opacity-50"}>
+                                <button type="submit" className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-amber-500 rounded-lg hover:bg-amber-600 focus:outline-none focus:ring focus:ring-amber-300 focus:ring-opacity-50">
                                     Sign in
                                 </button>
                                 <p className="mt-4 text-center text-gray-600">or sign in with</p>

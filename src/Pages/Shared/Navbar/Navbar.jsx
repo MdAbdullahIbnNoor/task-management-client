@@ -7,7 +7,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const { user, logOut } = useAuth();
+  const { user, logOut } = useAuth();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -20,13 +20,13 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="lg:fixed relative bg-opacity-30 bg-gray-800 shadow z-10 w-full lg:max-w-screen-2xl">
+    <nav className="relative bg-gray-800 shadow z-10 w-full lg:max-w-screen-2xl">
       <div className="px-6 py-4 mx-auto">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex items-center justify-between  lg:flex-grow ">
             <a href="/">
               <img
-                className="w-20 lg:w-36 h-full sm:h-7 object-cover"
+                className="w-20 lg:w-24 h-full sm:h-7 object-cover"
                 src={logo}
                 alt=""
               />
@@ -114,7 +114,7 @@ const Navbar = () => {
 
             <div className="flex items-center mt-4 lg:mt-0">
 
-              {/* {
+              {
                 user ? <button
                   onClick={handleLogout}
                   className="hidden mx-4 text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none"
@@ -125,14 +125,14 @@ const Navbar = () => {
                     fill="none"
                   />
                 </button> : ""
-              } */}
+              }
 
               <button
                 type="button"
                 className="flex items-center focus:outline-none"
                 aria-label="toggle profile dropdown"
               >
-                {/* {
+                {
                   user && <div className='flex justify-center items-center gap-2 border-2 px-4 py-1 rounded-3xl bg-gray-600'>
                     <span className='text-sm font-semibold text-gray-100'>{user?.displayName}</span>
                     <div className="w-10 h-10 overflow-hidden border-2 border-gray-400 rounded-full">
@@ -143,7 +143,7 @@ const Navbar = () => {
                       />
                     </div>
                   </div>
-                } */}
+                }
 
                 <h3 className="mx-2 text-gray-700 dark:text-gray-200 lg:hidden">
                   {user?.displayName}
