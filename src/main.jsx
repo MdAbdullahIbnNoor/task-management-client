@@ -16,6 +16,8 @@ import TaskList from './Pages/TaskList/TaskList.jsx';
 import UserProfile from './Pages/UserProfile/UserProfile.jsx';
 import AuthProvider from './provider/AuthProvider.jsx';
 import ManageTasks from './Pages/TaskList/TaskManage.jsx';
+import AboutUs from './Pages/AboutUs/AboutUs.jsx';
+import Contact from './Pages/Contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/about",
+        element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
         path: "/login",

@@ -19,7 +19,7 @@ const ManageTasks = () => {
     return (
         <DndProvider backend={HTML5Backend}>
           <div className="mx-auto py-0">
-            <div className="bg-gradient-to-b from-amber-500 to-yellow-500 p-8 rounded-lg shadow-lg">
+            <div className="bg-gradient-to-b from-amber-300 to-yellow-400 p-8 rounded-lg shadow-lg">
               <h1 className="text-3xl font-semibold text-white mb-2">
                 To-Do Tasks
               </h1>

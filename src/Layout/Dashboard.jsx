@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-import { BsCart3 } from "react-icons/bs";
-import { FaAd, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaUsers } from "react-icons/fa";
+import { FaAd, FaCalendar, FaHome } from "react-icons/fa";
 import useAuth from '../hooks/useAuth';
 import avater from '../assets/avater.png';
 
@@ -40,9 +39,9 @@ const Dashboard = () => {
                                 />
                             </div>
                         </div>
-                        <li className='px-1 py-2 text-base font-medium flex gap-2 items-center'>
+                        {/* <li className='px-1 py-2 text-base font-medium flex gap-2 items-center'>
                             <NavLink to='/dashboard/userProfile'><FaHome />UserHome</NavLink>
-                        </li>
+                        </li> */}
                         <li className='px-1 py-2 text-base font-medium flex gap-2 items-center'>
                             <NavLink to='/dashboard/taskList'><FaCalendar />Task List</NavLink>
                         </li>
