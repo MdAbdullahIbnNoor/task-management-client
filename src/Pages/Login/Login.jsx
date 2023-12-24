@@ -35,7 +35,7 @@ const Login = () => {
                         popup: ` animate__animated animate__fadeOutDown animate__faster `
                     }
                 });
-                navigate('/');
+                navigate('/dashboard/taskList');
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -47,7 +47,7 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
-                navigate('/');
+                navigate('/dashboard/taskList');
             })
     }
 

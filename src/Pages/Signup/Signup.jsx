@@ -8,8 +8,6 @@ import { MdAddPhotoAlternate } from "react-icons/md";
 import Swal from 'sweetalert2'
 import useAuth from '../../hooks/useAuth';
 
-
-
 const SignUp = () => {
     const { createUser, googleSignIn, updateUserProfile } = useAuth();
     const {
